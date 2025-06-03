@@ -1,0 +1,29 @@
+.markdown-source-view:not(.kanban-plugin *) {
+    --h1-color: #FF0000;
+    --h2-color: #75f48f;
+    --h3-color: #9cecfb;
+    --h4-color: #83a4d4;
+    --h5-color: #9f7eda;
+    --h6-color: #ebae53;
+    --bold-color:  #efff96;
+    --list-marker-color: #ff85fb;
+    --italic-color: #ff85fb;
+    padding-top: 2em;
+
+    .cm-formatting-em {
+        --text-formatting: #ff85fb;
+    }
+
+    .cm-formatting-strong {
+        --text-formatting: #efff96;
+    }
+
+    .cm-formatting-list {
+        --text-formatting: #ff85fb;
+    }
+
+    .cm-contentContainer > .cm-content {
+        padding-top: 2em;
+        padding-bottom: 100vh !important;
+    }
+}

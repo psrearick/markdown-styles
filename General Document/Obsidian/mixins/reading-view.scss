@@ -1,0 +1,251 @@
+.markdown-preview-view.markdown-rendered:not(.kanban-plugin *) {
+    background-color: #000000;
+    -webkit-font-smoothing: antialiased;
+    font-size: 9pt;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+    line-height: 1.25em;
+    max-width: 960px !important;
+    margin: 0 auto;
+    padding: 0 2em 2em !important;
+    border: solid 2px rgba(3, 183, 196, 0.7);
+
+    div,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        font: inherit;
+        font-size: 100%;
+        vertical-align: baseline;
+        box-sizing: border-box;
+        font-weight: normal;
+        font-style: normal;
+        color: #d9d9db;
+    }
+
+    .markdown-preview-sizer {
+        padding-top: 6rem;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Merriweather", "Times New Roman", Times, serif;
+        margin: 0.5em 0;
+        line-height: 1.2em;
+        text-transform: uppercase;
+    }
+
+    .heading-collapse-indicator {
+        display: none;
+    }
+
+    .el-h1 {
+        border: 2px solid rgba(3, 183, 196, 0.7);
+        background: rgba(100, 175, 200, 0.15);
+    }
+
+    .el-h2,
+    .el-h1 {
+        align-items: center;
+        display: flex;
+    }
+
+    h1,
+    h2 {
+        max-width: 70%;
+        margin: 1em 0.25em !important;
+        text-align: center;
+        padding: 0.5em;
+
+    }
+
+    .el-h1::before,
+    .el-h1::after,
+    .el-h2::before,
+    .el-h2::after {
+        content: "";
+        width: 1px;
+        flex: 1;
+    }
+
+    .el-h1::before,
+    .el-h1::after {
+        background-color: rgba(3, 183, 196, 0.7);
+        height: 2px;
+
+    }
+
+    .el-h2::before,
+    .el-h2::after {
+        background-color: rgba(3, 183, 196, 0.5);
+        height: 1px;
+
+    }
+
+    .el-h1 {
+        margin: 1em 0 3em;
+    }
+
+    h1 {
+        font-size: 2.25em;
+        font-weight: 200;
+    }
+
+    h2 {
+        font-size: 2em;
+        font-weight: 400;
+    }
+
+    h3 {
+        font-size: 1.75em;
+        font-weight: 600;
+    }
+
+    h4 {
+        font-size: 1.375em;
+        font-weight: 500;
+    }
+
+    h5 {
+        font-size: 1.25em;
+        font-weight: 400;
+    }
+
+    h6 {
+        font-size: 1.125em;
+        font-weight: 300;
+    }
+
+    body,
+    p,
+    td,
+    div {
+        word-wrap: break-word;
+    }
+
+    a {
+        color: #01d9ce;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #006672;
+    }
+
+    p {
+        margin: 0.5em 0;
+    }
+
+    strong {
+        font-weight: bold;
+    }
+
+    em {
+        font-style: italic;
+        font-weight: 300;
+    }
+
+    dd {
+        margin-bottom: 1em;
+    }
+
+    ul,
+    ol {
+        padding-left: 2em;
+        margin: 1em;
+    }
+
+    ul li,
+    ol li {
+        margin: 0.25em 0;
+        line-height: 1.5em;
+    }
+
+    ul ol,
+    ol ol,
+    ul ul,
+    ul ol {
+        margin: 0.25em 0em 0.25em 1em;
+    }
+
+    hr {
+        border: none;
+        overflow: visible;
+        text-align: center;
+        padding: 2em 0;
+        height: 5px;
+    }
+
+    hr:after {
+        color: rgba(3, 183, 196, 0.7);
+        letter-spacing: 1em;
+        content: '* * *';
+        font-size: 1.25em;
+    }
+
+    code {
+        background: rgba(100, 175, 200, 0.5);
+    }
+
+    pre,
+    pre code {
+        font-family: 'Fira Code', Georgia, Garamond, serif;
+        font-style: normal !important;
+        font-weight: normal !important;
+        background: rgba(100, 175, 200, 0.15);
+        padding: 0.75em;
+        margin: 0 0.75em;
+    }
+
+    pre .copy-code-button {
+      margin: 0.95em 1.75em 0 0;
+    }
+
+    .poetry pre {
+        display: block;
+        font-family: Georgia, Garamond, serif !important;
+        font-size: 110% !important;
+        font-style: italic;
+        line-height: 1.6em;
+        margin-left: 1em;
+    }
+
+    .poetry pre code {
+        font-family: Georgia, Garamond, serif !important;
+    }
+
+    blockquote {
+        padding: 1.2em;
+        background-color: #e7e7e7 20 !important;
+        border-radius: 5px;
+        margin: 1.5em 2.5em;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 1em 0;
+
+        th {
+          border: none;
+          padding: 0.5em;
+        }
+
+        td {
+            padding: 0.5em;
+            border: none;
+            border-top: 1px solid #d9d9db30;
+        }
+    }
+}

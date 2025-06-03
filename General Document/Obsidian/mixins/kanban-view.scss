@@ -1,0 +1,72 @@
+.kanban-plugin__markdown-preview-view {
+    * {
+        -webkit-font-smoothing: antialiased;
+        font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+        font-size: 0.875em !important;
+    }
+
+    a {
+        text-decoration: none !important;
+    }
+}
+
+body div.kanban-plugin__item-title-wrapper:hover,
+body div.kanban-plugin__item-content-wrapper:hover {
+    background: rgba(47, 79, 79, 0.2) !important;
+}
+
+body div.kanban-plugin__item-title-wrapper {
+    padding: 1.5em;
+}
+
+body div.kanban-plugin__lane-items {
+    background-color: rgb(47, 79, 79);
+}
+
+body div.kanban-plugin__item-button-wrapper {
+    background-color: rgba(47, 79, 79, 0.5);
+}
+
+body div.markdown-rendered.kanban-plugin__table-wrapper table {
+    border-collapse: collapse;
+    width: 90% !important;
+    max-width: 960px;
+    border: none;
+    border-bottom: 1px #162327;
+    box-shadow: none;
+
+    thead {
+        border: none;
+        box-shadow: none;
+
+        tr th {
+            background-color: #162327;
+            color: #fff;
+            border: none;
+            box-shadow: none;
+
+            .kanban-plugin__table-header-sort {
+                color: #fff;
+            }
+
+            .kanban-plugin__table-cell-wrapper {
+                width: 100% !important;
+                border: none;
+                box-shadow: none;
+            }
+        }
+    }
+
+    tbody {
+        border: none;
+
+        tr {
+            border: none;
+
+            td {
+                border-left: none;
+                border-right: none;
+            }
+        }
+    }
+}
