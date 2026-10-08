@@ -1,0 +1,47 @@
+/* --------------------------------------------------------------
+Book: justified Garamond with first-line indents, for paper.
+Page margins are left to Marked's print settings.
+--------------------------------------------------------------*/
+:root {
+    --font-body: "EB Garamond", 'Times New Roman', Times, serif;
+
+    --font-size-screen: 11pt;
+    --font-size-print: 12px;
+
+    --h1: 2em;
+    --h2: 1.7em;
+
+    --page-width: 816px;
+    --page-padding: 0 30px;
+
+    --table-rule: rgba(0, 0, 0, 0.25);
+    --table-head-bg: #eee;
+
+    --indent: 0.3in;
+}
+
+h1 {
+    margin: 0 auto;
+}
+
+/* !important because Marked's print stylesheet sets paragraph margins itself. */
+p {
+    margin: 0 !important;
+    text-align: justify;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+/* Only a paragraph that follows another paragraph is indented. */
+p + p {
+    text-indent: var(--indent);
+}
+
+li p {
+    text-indent: 0;
+}
+
+blockquote {
+    padding: 0.6em 1.2em;
+    margin: 0 2.5em;
+}

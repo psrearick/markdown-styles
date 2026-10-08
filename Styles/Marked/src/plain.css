@@ -1,0 +1,22 @@
+/* --------------------------------------------------------------
+Plain: undecorated serif for reading on screen.
+--------------------------------------------------------------*/
+:root {
+    --font-body: "Noto Serif", "EB Garamond", 'Times New Roman', Times, serif;
+
+    --text: #323232;
+    --link: #1a5a8a;
+    --link-hover: #3593d9;
+
+    /* 140% reproduces the old Base tables that bled past the text column. */
+    --table-width: 100%;
+}
+
+@media screen {
+    .inverted {
+        --text: #fcf9f7;
+        --bg: #080a0b;
+        --link: #a6d6db;
+        --link-hover: #d3ebee;
+    }
+}

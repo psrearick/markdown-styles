@@ -1,0 +1,137 @@
+/* --------------------------------------------------------------
+Fancy: condensed sans with a framed page and ruled h1/h2.
+Non-standard fonts used: Montserrat, Merriweather, Fira Code
+--------------------------------------------------------------*/
+:root {
+    --font-body: "Montserrat", "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+    --font-heading: "Merriweather", "Times New Roman", Times, serif;
+
+    --font-size-screen: 10pt;
+    --font-size-print: 9px;
+    --line-height: 1.25;
+
+    /* Grey version: --accent: rgba(0, 0, 0, 0.1); --frame: rgba(170, 170, 170, 0.5); --accent-text: currentColor; */
+    --accent: #26a09a;
+    --frame: #57a29f;
+    --accent-text: #1a7570;
+
+    /* Set to none to drop the lines beside h1/h2 when printing. */
+    --print-rules: inline-block;
+    --rule-display: inline-block;
+
+    --gutter: 60px;
+    --page-padding: 0 var(--gutter) 10px;
+
+    --hr-color: var(--accent);
+    --code-bg: #d9d9d920;
+    --quote-bg: #e7e7e720;
+    --table-rule: rgba(0, 0, 0, 0.1);
+}
+
+#wrapper {
+    border: solid 2px var(--frame);
+}
+
+/* On paper: no frame, so h1 has no gutter to reach across; smaller headings;
+   plain italics. Set twice because Marked's PDF export uses .mkprinting and
+   the system print dialog uses print media. */
+body.mkprinting {
+    --gutter: 0px;
+    --rule-display: var(--print-rules);
+    --quote-bg: #fff;
+    --accent-text: currentColor;
+    --h1: 1.5em;
+    --h2: 1.25em;
+    --h3: 1.125em;
+    --h4: 1em;
+    --h5: 0.85em;
+    --h6: 0.75em;
+    --h1-weight: 400;
+}
+
+@media print {
+    body {
+        --gutter: 0px;
+        --rule-display: var(--print-rules);
+        --quote-bg: #fff;
+        --accent-text: currentColor;
+        --h1: 1.5em;
+        --h2: 1.25em;
+        --h3: 1.125em;
+        --h4: 1em;
+        --h5: 0.85em;
+        --h6: 0.75em;
+        --h1-weight: 400;
+    }
+}
+
+em {
+    color: var(--accent-text);
+}
+
+::selection {
+    background: rgba(157, 193, 200, 0.5);
+}
+
+/* --------------------------------------------------------------
+Heading rules: a line either side of the text, clipped by the
+heading's own box. h1 reaches the frame, h2 stops short of it.
+--------------------------------------------------------------*/
+h1,
+h2 {
+    overflow: hidden;
+}
+
+h1 {
+    margin: 1em calc(-1 * var(--gutter));
+    padding: 1em var(--gutter);
+}
+
+h2 {
+    max-width: 80%;
+}
+
+h1::before,
+h1::after,
+h2::before,
+h2::after {
+    content: "";
+    display: var(--rule-display);
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+    height: 1px;
+    background-color: var(--accent);
+}
+
+h1::before,
+h1::after {
+    height: 2px;
+}
+
+h1::before,
+h2::before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+
+h1::after,
+h2::after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+
+/* --------------------------------------------------------------
+Dark mode
+--------------------------------------------------------------*/
+@media screen {
+    .inverted {
+        --accent: rgba(0, 255, 242, 0.5);
+        --frame: rgba(0, 255, 242, 0.5);
+        --accent-text: rgba(0, 255, 242, 0.6);
+        --hr-color: var(--accent);
+        --table-head-bg: transparent;
+        --link: #22e9ff;
+        --link-hover: #006672;
+    }
+}
